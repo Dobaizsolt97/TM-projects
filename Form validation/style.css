@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Patua+One&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Patua One", cursive;
+  margin: 0;
+}
+:root {
+  --backColor: #f9f7e8;
+  --succesColor: #61bfad;
+  --errorColor: #e54b4b;
+}
+body {
+  background-color: var(--backColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  background-color: white;
+  width: 400px;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: var(--errorColor);
+  font-size: 35px;
+}
+.form {
+  padding: 20px 40px;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+.form-control input:focus {
+  outline: none;
+}
+.form-control.error input {
+  border: 2px solid var(--errorColor);
+}
+.form-control.success input {
+  border: 2px solid var(--succesColor);
+}
+.form-control small {
+  color: var(--errorColor);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+.form-control label {
+  margin-bottom: 5px;
+  display: block;
+  font-size: 19px;
+}
+
+.form button {
+  width: 100%;
+  background: #167c80;
+  border: 1px solid #167c80;
+  color: white;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.5s;
+}
+.form button:hover {
+  border: 2px solid #167c80;
+  color: #167c80;
+  background: white;
+}
