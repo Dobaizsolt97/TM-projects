@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1d;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+.screen {
+  background-color: white;
+  height: 70px;
+  width: 90%;
+  margin: 20px auto;
+  transform: rotateX(-45deg);
+  box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+.container {
+  perspective: 1000px;
+}
+.seat {
+  background-color: #4e4e50;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px 10px 0px 0px;
+}
+.seat:nth-of-type(2) {
+  margin-right: 20px;
+}
+
+.seat.occupied {
+  background-color: #950740;
+}
+.seat.selected {
+  background-color: #230090;
+}
+.seat:not(.occupied):hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.showcase .seat:hover {
+  transform: scale(1);
+  cursor: default;
+}
+.movie-container {
+  text-align: center;
+  font-size: 20px;
+}
+.movie-container select {
+  margin-left: 10px;
+  background-color: white;
+  border: 0;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  outline: none;
+}
+.showcase {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.showcase li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.row {
+  display: flex;
+}
+p {
+  margin-top: 20px;
+}
+span {
+  color: #c3073f;
+}
