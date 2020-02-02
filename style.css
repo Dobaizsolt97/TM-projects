@@ -16,20 +16,28 @@ body {
 a {
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 .showcase {
-  width: 300px;
-  height: 200px;
+  width: 25%;
+  height: 30vh;
   background-color: #29648a;
   margin: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
+  min-height: 180px;
 }
 .showcase:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 a:hover {
   text-decoration: underline;
 }
+@media (max-width: 800px) {
+  .showcase {
+    font-size: 20px;
+  }
+}
+
